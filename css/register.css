@@ -1,0 +1,152 @@
+body{
+    background-image: url('../images/sneak.jpeg');
+   background-size: 400px;
+ }
+ 
+ #main{
+   display: grid;
+   background-color: rgba(212,212,212,.7);
+   width:40%;
+   margin-left: 10%;
+   padding: 20px;
+ }
+ 
+ #title{
+   justify-self: center;
+ }
+ 
+ #description{
+   justify-self: center;
+   margin: 1px;
+   font-size: 20px;
+ }
+ 
+ #survey-form{
+   display: grid;
+   grid-template-areas: leftt rightt;
+   justify-items: center;
+   line-height:1rem;
+ }
+ 
+#survey-left{
+  display: grid;
+  grid-area: leftt;
+}
+
+#survey-right{
+  display: grid;
+  grid-area: rightt;
+}
+
+label{
+  font-size:1.5rem;
+}
+ 
+input,select,textarea{
+  min-width: 350px;
+  min-height: 2.3rem;
+  border-width: 0px;
+  border-radius: 0.25rem;
+  margin: 0.8rem 0rem;
+}
+ 
+input[type="checkbox"],[type="radio"]{
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  margin-right: 5px;
+}
+
+select{
+  font-size: 1rem;
+  padding: 10px;
+  background-color: #fff;
+}
+
+textarea{
+  height: 80px;
+}
+
+.form-control{
+  margin-top: 25px;
+}
+
+#submit{
+  width:350px;
+  height: 40px;
+  border: none;
+  font-size: 1rem;
+  background-color: #18bd5b;
+}
+
+@media(max-width: 400px){
+
+  body{
+    background-image: url('https://img.freepik.com/free-vector/gumshoes-sketch-grunge_98292-4630.jpg?w=740&t=st=1649577375~exp=1649577975~hmac=db2f29d929492791267687bf849bb2f5fbb3dd61f20683e8b625535189493583');
+    background-size: 399px;
+    background-repeat: repeat-y;
+  }
+
+  #main{
+    display: grid;
+    background-color: rgba(212,212,212,.7);
+    width:80%;
+    margin: 0% 5%;
+    padding: 20px;
+  }
+
+  #title{
+    justify-self: center;
+  }
+
+  #description{
+    justify-self: center;
+    margin: 1px;
+    font-size: 20px;
+  }
+
+  #survey-form{
+    display: grid;
+    justify-items: center;
+    line-height:1rem;
+  }
+
+  label{
+    font-size:1.5rem;
+  }
+
+  input,select,textarea{
+    min-width: 250px;
+    min-height: 2.3rem;
+    border-width: 0px;
+    border-radius: 0.25rem;
+    margin: 0.8rem 0rem;
+  }
+
+  input[type="checkbox"],[type="radio"]{
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+    margin-right: 5px;
+  }
+
+  select{
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  textarea{
+    height: 80px;
+  }
+
+  .form-control{
+    margin-top: 25px;
+  }
+
+  #submit{
+    width:270px;
+    height: 40px;
+    border: none;
+    font-size: 1rem;
+    background-color: #18bd5b;
+  }
+}
