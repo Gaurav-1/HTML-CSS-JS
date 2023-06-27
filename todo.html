@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="">
+	<meta name="viewport" content="width=device-width, initail-scale=1">
+	<link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<style type="text/css">
+		ul li{cursor: pointer;}
+	</style>
+</head>
+<body>
+	<section class="container-fluid row mt-4">
+		<div class="col-3"></div>
+		<div class="col-5">
+			<input type="text" name="todo" value="" placeholder="Add toady's todo" class="form-control" id="task"><br>
+			<input type="button" name="Add" value="Add" class="btn btn-info" onclick="todoadd()">
+			<input type="button" name="Done" value="Done" class="btn btn-success ml-5" onclick="finish()">
+			<ul class="list-unstyled bg-light mt-4" id="refrences">
+				<li>Task1</li>
+				<li>Task2</li>
+				<li>Task3</li>
+				<li>Task4</li>
+			</ul>
+		</div>
+	</section>
+	<script type="text/javaScript">
+	function todoadd() {
+			var task,text,newItem,ull,lii;
+			ull=document.getElementById('refrences');
+			task = document.getElementById("task").value;
+			if (task=="") {
+				alert("Enter something for todo")
+			} 
+			else {text=document.createTextNode(task);
+			newItem= document.createElement("li");
+			newItem.appendChild(text);
+			document.getElementById("refrences").appendChild(newItem);}
+			
+			
+	}
+	function finish() {
+		ull=document.getElementById('refrences');
+		lii=ull.getElementsByTagName('li');	
+			for (var i = 0; i < lii.length; i++) {
+				
+				ull.getElementsByTagName('li')[i].style.display="none";
+				
+			}
+	}
+	</script>
+</body>
+</html>
